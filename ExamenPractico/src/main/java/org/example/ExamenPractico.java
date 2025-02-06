@@ -37,15 +37,17 @@ public class ExamenPractico {
             List<Integer> num10Lista = new ArrayList<>();
 
             num10Lista = numerosLista.stream()
-                    .filter(numero -> numero > 10)
-                    .map(numero -> numero * 2)
+                    .filter(numero -> numero > 10) //filtramos los números mayores a 10
+                    .map(numero -> numero * 2)     //Multiplicmaos los números por 2
                     .collect(Collectors.toList());
 
+            //Calculamos la suma total de los números
             int sumaTotal = 0;
             for (Integer num : num10Lista) {
                 sumaTotal += num;
             }
 
+            //Se imprimen los números
             System.out.println("La suma total es: " + sumaTotal);
         }
 
